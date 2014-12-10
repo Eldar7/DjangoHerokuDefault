@@ -7,7 +7,7 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
-#import os
+import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # begin heroku Parse database configuration from $DATABASE_URL
 import dj_database_url
