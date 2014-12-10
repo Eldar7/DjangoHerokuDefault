@@ -8,7 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # begin heroku Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES = {}
@@ -16,7 +16,7 @@ DATABASES['default'] = dj_database_url.config()
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         'NAME': os.path.join(os.path.dirname(os.path.dirname(__file__)), 'db.sqlite3'),
 #     }
 # }
 
