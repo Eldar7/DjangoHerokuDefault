@@ -28,7 +28,7 @@ ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
 
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = (os.path.join(os.path.dirname(__file__), '..', 'static'))
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
