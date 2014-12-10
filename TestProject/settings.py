@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR2 = os.path.dirname(os.path.dirname(__file__))
 # begin heroku Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES = {}
@@ -28,11 +29,11 @@ ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
 
-STATIC_ROOT = (os.path.join(os.path.dirname(__file__), '..', 'static'))
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR2, 'static'),
 )
 #end heroku
 
