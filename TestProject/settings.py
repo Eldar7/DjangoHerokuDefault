@@ -48,6 +48,12 @@ STATICFILES_DIRS = (
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'd@k#9!xfcite7s_c-fbj&!x-fz)xo915i9iy=bpo+k*ogx5g6y'
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
+)
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -65,6 +71,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'OGS'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -81,6 +88,12 @@ ROOT_URLCONF = 'TestProject.urls'
 
 WSGI_APPLICATION = 'TestProject.wsgi.application'
 
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    [os.path.join(BASE_DIR2, 'templates')]
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
