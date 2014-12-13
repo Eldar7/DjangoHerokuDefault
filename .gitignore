@@ -3,4 +3,4 @@ venv
 *.pyc
 staticfiles
 *.sqlite3
-settings.py
+TestProject/settings.py
