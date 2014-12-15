@@ -8,8 +8,10 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('OGS.urls')),
+    # url(r'^', include('TestApp.urls')),
 )
+
+#this resolve problem with static in the Heroku:
 urlpatterns += patterns('',
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
         'document_root': settings.STATIC_ROOT,
