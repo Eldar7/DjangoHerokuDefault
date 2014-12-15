@@ -5,3 +5,5 @@ DjangoHerokuDefault
 * cd DjangoHerokuDefault
 * heroku create
 * git push heroku master
+* heroku open
+* PROFIT
