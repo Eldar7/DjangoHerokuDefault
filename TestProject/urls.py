@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'^', include('TestApp.urls')),
+    url(r'^', include('TestApp.urls')),
 )
 
 #this resolve problem with static in the Heroku:
